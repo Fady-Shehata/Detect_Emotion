@@ -68,9 +68,9 @@ def facecrop(image):
 
 
 
-@app.route('/', methods=['POST'])
+@app.route('/', methods=['GET'])
 def predict():
-    if request.method == 'POST':
+    if request.method == 'GET':
         file = request.files.get('images')
         if file is None or file.filename == "":
             return jsonify({'error': 'no file'})
