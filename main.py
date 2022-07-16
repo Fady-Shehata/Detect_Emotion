@@ -68,7 +68,7 @@ def facecrop(image):
 
 
 
-@app.route('/', methods=['GET'])
+@app.route('/predict', methods=['GET'])
 def predict():
     if request.method == 'GET':
         file = request.files.get('images')
